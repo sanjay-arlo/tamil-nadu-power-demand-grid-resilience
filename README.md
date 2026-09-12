@@ -1,37 +1,89 @@
 # Tamil Nadu Power Demand & Grid Resilience
 
-> Business Analyst portfolio case study analysing regional peak-demand pressure, supply headroom, outages and field-capacity signals.
+> **Business Analyst / Data Analyst portfolio case study** analysing regional peak-demand pressure, supply headroom, outage burden and workforce capacity to identify grid-resilience priorities.
 
 ## 🚀 Live Dashboard
 
 **[Open the interactive dashboard](https://sanjay-arlo.github.io/tamil-nadu-power-demand-grid-resilience/)**
 
-## Business question
+## Executive summary
 
-**How is peak power demand trending across regions, and where is resilience risk most concentrated?**
+The case converts regional utility data into a resilience-management workflow: validate demand and capacity measures, quantify headroom and outage pressure, segment regional risk, visualise operational constraints, and prioritise capacity and reliability interventions.
 
-## Dashboard
+## Business problem
 
-Review peak-demand trends, estimated demand-supply headroom, outage frequency, staffing-pressure signals and regional risk ranking.
+**Where do demand, available capacity, outages and workforce pressure combine into the highest resilience risk?**
 
-## KPI logic
+## Analyst workflow
 
-**Demand-supply gap** = projected peak demand − available generation/import capacity.
+**Excel → Python / Pandas / NumPy (optional) → SQL / MySQL → Power BI → Decision**
 
-**Outage rate** = outage incidents / observed division-days.
+### 1. Excel — first-pass control
 
-## Dataset
+Clean daily regional data, reconcile peak demand and available capacity, calculate headroom/utilisation, build pivots and identify operational exceptions.
 
-Synthetic/illustrative daily regional data is used for portfolio demonstration. It is not official TANGEDCO/CEA operational data.
+### 2. Python — optional analytical layer
 
-## Production upgrade
+Use **Pandas + NumPy** for demand-distribution analysis, anomaly detection, repeatable transformations, stress testing or sensitivity analysis when useful.
 
-Integrate verified demand, generation availability, outage, weather and workforce records; establish master geography, data-quality rules, scenario assumptions and governance for operational decision use.
+### 3. SQL / MySQL — mandatory analytical layer
 
-## Limitation
+Use joins, CTEs, aggregations, window functions, regional segmentation, rankings and exception queues for demand, capacity, outage and workforce KPIs.
 
-Portfolio case study only; not an official grid-planning or dispatch tool.
+### 4. Power BI — mandatory executive layer
+
+Build a governed data model and DAX measures, then deliver **Grid Executive → Demand & Headroom → Regional Risk → Resilience Scenario** with operational slicers and drill-through.
+
+### 5. Decision — mandatory outcome
+
+Prioritise capacity, reliability and workforce interventions with **priority, owner, action, expected impact, threshold and escalation logic**.
+
+## Technical stack
+
+- **Excel** — cleaning, reconciliation, formulas, pivots, exception analysis and scenario planning
+- **SQL / MySQL** — utility KPIs, segmentation, ranking and exception queues
+- **Python / Pandas / NumPy** — optional EDA, anomaly detection, transformations and stress testing
+- **HTML / CSS / JavaScript** — interactive live dashboard
+- **Chart.js** — browser-based visualisation
+- **GitHub Pages** — live dashboard hosting
+- **Power BI** — compatible dashboard design direction, data model, DAX and executive reporting specification
+- **GitHub** — version control and documentation
+
+## Dashboard story
+
+1. **Grid Executive** — demand, capacity and headline resilience indicators
+2. **Demand & Headroom** — demand pressure versus available capacity
+3. **Regional Risk** — outage and staffing-risk segmentation
+4. **Reliability View** — operational exception patterns
+5. **Resilience Scenario** — illustrative capacity/reliability levers
+6. **Decision Queue** — priority actions for management review
+
+## KPI framework
+
+- **Peak demand** = maximum observed peak demand within selected scope
+- **Average headroom** = available capacity − peak demand
+- **Outage burden** = total outage incidents within selected scope
+- **Staff vacancy rate** = average field-staff vacancy rate
+- **Resilience priority** = low headroom + high outage burden + workforce pressure
+
+## Business Analyst deliverables
+
+Business case, stakeholder framing, KPI dictionary, Excel workflow, optional Python analysis, SQL/MySQL analysis, Power BI/DAX specification, interactive dashboard, risk-priority framework and production-upgrade plan.
+
+## Data quality & governance
+
+Validate required fields, demand/capacity relationships, numeric ranges, duplicate records, date completeness and dashboard-to-source reconciliation. Scenario assumptions remain clearly labelled as illustrative.
+
+## Production upgrade path
+
+Integrate governed demand forecasts, generation availability, transmission/import capacity, outage systems, weather variables, workforce records and master geography. Add refresh SLAs, source lineage, anomaly monitoring and approved operational thresholds.
+
+## Important limitation
+
+This is a **portfolio case study using synthetic / illustrative data**. It is not an official TANGEDCO/CEA operational planning or dispatch tool.
 
 ## Author
 
-**Sanjay Arlo** — Business Analyst / Data Analyst Portfolio
+**Sanjay Arlo**  
+Business Analyst / Data Analyst Portfolio  
+[GitHub](https://github.com/sanjay-arlo)
