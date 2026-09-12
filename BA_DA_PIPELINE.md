@@ -1,19 +1,22 @@
 # BA / DA Delivery Pipeline
 
 ## Business question
-Where do demand, capacity, outages and workforce pressure combine into resilience risk?
+Where do demand, capacity, outages and workforce pressure combine into grid-resilience risk?
 
-## 01 — Excel
-Clean regional day-level data, reconcile peak demand and available capacity, derive headroom/utilisation, and flag operational exceptions.
+## 01 — Excel — mandatory first pass
+Clean regional day-level records, reconcile demand/capacity, use formulas and pivots to derive headroom/utilisation, investigate exceptions and create an operational control view.
 
-## 02 — SQL
-Calculate peak demand, capacity headroom, outage burden and regional resilience rankings.
+## 02 — Python (Pandas + NumPy) — optional
+Use Python for EDA, demand-distribution analysis, anomaly detection, peak-event profiling and repeatable transformations when the analysis benefits from automation.
 
-## 03 — Power BI
-Build: Grid Executive → Demand & Headroom → Regional Risk → Resilience Scenario. Use region/date drill-through and operational filters.
+## 03 — SQL — mandatory analytical layer
+Use joins, CTEs, aggregations and window functions for headroom KPIs, regional rankings, peak-demand trends, outage burden and exception queues.
 
-## 04 — Decision
-Prioritise capacity, reliability and workforce interventions by risk, headroom and service impact.
+## 04 — Power BI — mandatory decision interface
+Build the model, DAX measures, slicers and drill-through: Grid Executive → Demand & Headroom → Regional Risk → Resilience Scenario.
+
+## 05 — Decision — mandatory outcome
+Prioritise capacity, reliability and workforce interventions with owner, urgency, expected service impact, assumptions and escalation trigger.
 
 ## Acceptance criteria
-Demand/headroom calculations reconcile; exception thresholds are documented; all sample data is clearly labelled synthetic.
+Demand/headroom calculations reconcile across stages; thresholds are documented; all sample data is clearly labelled synthetic; decisions are traceable to governed KPIs.
